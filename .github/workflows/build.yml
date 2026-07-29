@@ -25,7 +25,7 @@ jobs:
         run: composer validate --no-check-publish
 
         - name: Install Composer dependencies
-  run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-audit
+          run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-audit
 
 
       - name: Prepare Laravel
