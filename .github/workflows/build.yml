@@ -22,13 +22,12 @@ jobs:
           coverage: none
 
       - name: Validate composer.json
-        run: composer validate --no-check-publish
+  run: composer validate --no-check-publish
 
-        - name: Install Composer dependencies
-          run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-audit
+- name: Install Composer dependencies
+  run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader --no-audit
 
-
-      - name: Prepare Laravel
+- name: Prepare Laravel
         run: |
           cp .env.example .env
           mkdir -p bootstrap/cache
